@@ -1,0 +1,53 @@
+{% block sidenav %}
+    <div class="row">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light col-2">
+        <a href="{{ path("default") }}"
+           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none row">
+            <img src="{{ asset('images/finalLogo.png') }}" alt="Le logo : un singe à lunettes" class="col-4">
+            <h3 class="col-6">Admin</h3>
+        </a>
+        <hr class="mb-5">
+        <ul class="nav nav-pills flex-column mb-5">
+            <li class="nav-item my-3">
+                <a href="#" class="nav-link active" aria-current="page">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#home"></use>
+                    </svg>
+                    Acceuil
+                </a>
+            </li>
+            <li>
+                <a href="" class="nav-link link-dark  my-3">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#speedometer2"></use>
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('admin_product_index') }}" class="nav-link link-dark  my-3">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#table"></use>
+                    </svg>
+                    Produits
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark  my-3">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#grid"></use>
+                    </svg>
+                    Clients
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark  my-3">
+                    <svg class="bi me-2" width="16" height="16">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                    Commandes
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

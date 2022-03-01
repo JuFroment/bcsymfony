@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {#carousel principal#}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('images/slider4.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/slider5.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/slider7.png') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-3">
+                    <img src="{{ asset('images/' ~ product.image) }}" class="img-fluid d-block mx-auto" alt="100%x280">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.name }}</h4>
+                        <p class="card-text">{{ product.description|u.truncate(50, '...') }}</p>
+                        <a href="{{ path('panier_add', {'id' : product.id}) }}" class="btn buttonStyle">Ajouter au panier</a>
+                        <a href="{{ path('detail', {'id': product.id}) }}" class="btn btn-success">Voir le détail</a>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <nav aria-label="Page navigation example" class="mt-3">
+                <ul class="pagination">
+                    {% if currentPage != 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ path('page', {'currentPage': currentPage-1, 'nbResult': nbResult}) }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    {% for page in 1..nbPage %}
+                        <li class="page-item {% if page == currentPage %}active{% endif %}"><a class="page-link" href="{{ path('page', {'currentPage': page, 'nbResult': nbResult}) }}">{{ page }}</a></li>
+                    {% endfor %}
+
+                    {% if currentPage != nbPage %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ path('page', {'currentPage': currentPage+1, 'nbResult': nbResult}) }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {%   dump(currentPage) %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

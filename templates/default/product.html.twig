@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="text-center mt-3">Vous êtes sur la page : {{ product.name }} ! </h1>
+    <div class="text-end">
+        <a href="{{ path("default") }}" class="btn btn-warning">Retour</a>
+    </div>
+    <div class="row my-5">
+        <div class="col-4">
+            <img src="{{ asset('images/products/' ~ product.image) }}" class="img-fluid" width="250px" height="auto">
+        </div>
+        <div class="col-8">
+            <h2 class="text-center mb-3">{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+    {% endblock %}
