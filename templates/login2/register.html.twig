@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Register2Controller!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h2 class="text-center">CRÉER UN COMPTE</h2>
+        <form>
+            <div class="row my-3">
+                <h5 class="col-3">Genre </h5>
+                <div class="col-3">
+                    <input type="radio" id="monsieur" name="genre" value="monsieur">
+                    <label for="huey">Monsieur</label>
+                </div>
+                <div class="col-3">
+                    <input type="radio" id="madame" name="genre" value="madame">
+                    <label for="dewey">Madame</label>
+                </div>
+                <div class="col-3">
+                    <input type="radio" id="autre" name="genre" value="autre" checked>
+                    <label for="louie">Autre</label>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="prenom" class="form-label col-3">Prénom </label>
+                <input type="text" class="col-9" id="prenom" name="prenom">
+            </div>
+            <div class="mb-3 row">
+                <label for="nom" class="form-label col-3">Nom de famille</label>
+                <input type="text" class="col-9" id="nom" name="nom">
+            </div>
+            <div class="mb-3 row">
+                <label for="email" class="form-label col-3">Email address</label>
+                <input type="email" class="col-9" id="email" name="email">
+            </div>
+            <div class="mb-3 row">
+                <label for="password" class="form-label col-3">Password</label>
+                <input type="password" class="col-9" id="password" name="password">
+            </div>
+            <div class="mb-3 row">
+                <label for="bday" class="col-3">Date de naissance </label>
+                <input type="date" id="bday" name="bday" class="col-3">
+            </div>
+            <div class="mb-3 row">
+                <label for="adresse" class="form-label col-3">Adresse postale</label>
+                <input type="text" class="col-9" id="adresse" name="adresse">
+            </div>
+            <div class="mb-3 row">
+                <label for="adresse2" class="form-label col-3">Complément d'adresse</label>
+                <input type="text" class="col-9" id="adresse2" name="adresse2" placeholder="Bâtiment, étage...">
+            </div>
+            <div class="mb-3 row">
+                <label for="codepostal" class="form-label col-3">Code postal</label>
+                <input type="number" class="col-9" id="codepostal" name="codepostal" placeholder="69003">
+            </div>
+            <div class="mb-3 row">
+                <label for="ville" class="form-label col-3">Ville</label>
+                <input type="text" class="col-9" id="ville" name="ville" placeholder="Lyon">
+            </div>
+            <div class="text-center my-3">
+                <button type="submit" class="btn btn-lg headerConnect text-white">Se connecter</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

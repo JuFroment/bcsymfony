@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PanierController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    {% if cart|length > 0 %}
+    <h2 class="text-center">Montant total : {{ price }} €</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Produit</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix Unitaire</th>
+            <th scope="col">Prix Total</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for productOrder in cart %}
+        {% dump productOrder %}
+        <tr>
+            <th scope="row">{{ productOrder.product.id }}</th>
+            <td>{{ productOrder.product.name }}</td>
+            <td>{{ productOrder.quantity }}</td>
+            <td>{{ productOrder.product.price }} €</td>
+            <td>{{ productOrder.product.price * productOrder.quantity }} €</td>
+            <td>
+                <a href="{{ path("panier_remove_product", {'id' : productOrder.product.id}) }}"><i class="fas fa-trash"></i></a>
+                <a href="{{ path('panier_addRemoveOne', {'id' : productOrder.product.id, 'operator': 'plus'}) }}"><i class="fa-solid fa-plus"></i></a>
+                <a href="{{ path('panier_addRemoveOne', {'id' : productOrder.product.id, 'operator': 'minus'}) }}"><i class="fa-solid fa-minus"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+        <h2 class="text-center">Votre panier est vide !</h2>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

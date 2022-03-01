@@ -1,0 +1,211 @@
+/* COOKIES */
+
+.bg-custom{
+    background-color:#130f40;
+}
+.button-fixed{
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    border-radius: 4px;
+}
+.fas{
+    cursor: pointer;
+    font-size: 24px;
+}
+p{
+    font-size: 14px;
+}
+
+/* FIN COOKIES */
+
+/********
+* FONTS *
+********/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto&display=swap');
+
+/*css global*/
+
+html {
+    background-color: #f1f5f2;
+    font-family: Roboto, sans-serif !important;
+}
+
+footer {
+    background-color: #422D24 !important;
+}
+
+sup {
+    color: red!important;
+}
+
+h2 {
+    font-size: 2.5em !important;
+    font-family: Adlery, sans-serif !important;
+    color: #422d24 !important;
+}
+
+.buttonStyle {
+    background-color: #B39356 !important;
+    border: 1px solid #2b2b2b !important;
+    color: #2b2b2b !important;
+}
+
+.buttonStyle:hover {
+    background-color: #6e4b3d !important;
+    color: #f1f5f2 !important;
+}
+
+.buttonCart {
+    background-color: #B39356 !important;
+    border: 1px solid #2b2b2b !important;
+    color: #2b2b2b !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*css du header*/
+header {
+    background-color: #c2a878;
+}
+
+/* css du header admin */
+.headerAdmin{
+    height: 75px !important;
+}
+
+/*Social medias (2) */
+.social-media a {
+    border: 1px solid #6e4b3d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+
+.social-media a:hover {
+    background: #6e4b3d;
+    border-color: #422d24;
+    color: white;
+}
+
+/*titre (2)*/
+h1 {
+    font-family: 'Permanent Marker', cursive !important;
+    font-weight: bold;
+    font-size: 2.5em !important;
+    color: #2b2b2b;
+    -webkit-text-stroke: 1px #f1f5f2;
+}
+.h1Link {
+    text-decoration: none;
+}
+
+/*bouton connexion (2) */
+.headerConnect {
+    background-color: #422d24 !important;
+    border-radius: 5px !important ;
+}
+
+.headerConnect:hover {
+    border: 1px solid #422d24;
+    background-color: #6e4b3d !important;
+}
+
+/*lien de créaton de compte (3)*/
+.registerLink {
+    text-decoration: none !important;
+    color: #2b2b2b;
+}
+
+.registerLink:hover {
+    text-decoration: underline !important;
+}
+
+.registerLink:visited {
+    color: #2b2b2b;
+}
+
+/*menu et search bar*/
+.headerMenu {
+    background-color: #422d24 !important;
+}
+
+/*search bar*/
+#searchBar {
+    width: 500px;
+}
+
+/*search button (3)*/
+.btn-outline-danger {
+    border-color: #B39356 !important ;
+    color: #B39356 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #B39356 !important;
+}
+
+.btnSearch:hover{
+    color: #2b2b2b !important;
+}
+
+/*nav text size*/
+nav ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+/*lien actif*/
+.activeNavLink {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #B39356 !important;
+    border: 2px solid #B39356 !important;
+    border-radius: 5px !important;
+    box-shadow: 5px 5px 5px #2b2b2b;
+    text-shadow: 5px 5px 5px #2b2b2b;
+
+}
+
+/*lien non actif*/
+.nonActiveLink:hover {
+    color: #B39356 !important;
+    text-shadow: 5px 5px 5px #2b2b2b;
+    font-size: 1.1em;
+
+}
+/*fin css header*/
+
+/*css carousel*/
+
+.carousel-control-prev-icon {
+    margin-left: -250px !important;
+}
+.carousel-control-next-icon {
+    margin-right: -250px !important;
+}
+
+/*css QSM*/
+#qsmText {
+    font-size: 1.2em;
+    font-family: Roboto, sans-serif;
+}
+
+/* css card */
+.bgcard {
+    background: rgb(179,147,86);
+    background: linear-gradient(90deg, rgba(179,147,86,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(179,147,86,1) 100%);
+}
