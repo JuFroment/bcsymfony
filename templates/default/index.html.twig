@@ -3,47 +3,170 @@
 {% block title %}Homepage{% endblock %}
 
 {% block body %}
-    {{ parent() }}
-        {#carousel principal#}
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('images/slider4.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/slider5.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('images/slider7.png') }}" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-<div class="container">
-    <div class="row">
-        {% for product in products %}
-            <div class="col-3">
-                <img src="{{ asset('images/products/' ~ product.image) }}" class="img-fluid d-block mx-auto" alt="100%x280">
-                <div class="card-body">
-                    <h4 class="card-title">{{ product.name }}</h4>
-                    <p class="card-text">{{ product.description|u.truncate(50, '...') }}</p>
-                    <a href="{{ path('panier_add', {'id' : product.id}) }}" class="btn buttonStyle">Ajouter au panier</a>
-                    <a href="{{ path('detail', {'id': product.id}) }}" class="btn btn-success">Voir le détail</a>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>
 
+
+    {{ parent() }}
+    {# carousel principal #}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('images/slider4.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/slider5.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/slider7.png') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <section>
+        <div class="container">
+            <h2 class="text-center mt-5">Meilleures Ventes</h2>
+            <!-- Swiper -->
+            <div class="swiper my-5 mySwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-42f301fbbea919410" aria-live="polite">
+                    <div class="swiper-slide swiper-slide-active d-flex justify-content-center swiper-slide-active"
+                         style="width: 406.667px; margin-right: 30px;"
+                         role="group"
+                         aria-label="1 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/verynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar1</h5>
+                                <p class="card-text">{{ 'Logoden biniou degemer mat an penn ar bed c’hwec’h, baradoz ha troc’hañ e
+                            Ar Gall hennezh c’houzoug estreget kentel, se heol ziskouez degouezhout dont hag C’hall. Dro
+                            dirak fiziañs pennad c’hleuz ar kastell stivell tregont, tad pignat fraoñval tiegezh Krouer
+                            ar banniel dirak bro, pod tregas serret Aradon alies Ar Releg-Kerhuon muiañ. Anzav vihan
+                            tachenn kilhog Aradon brudet saveteiñ netra Santeg, sec’hed al Skos aon c’helec’h ar bier
+                            pegañ rev, tan ar klask evitañ hevelep Lanuon prenañ.'|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                                    <button class="btn btn-outline-success">11.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next d-flex justify-content-center swiper-slide-next"
+                         style="width: 406.667px; margin-right: 30px;"
+                         role="group"
+                         aria-label="2 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/flippedverynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar2</h5>
+                                <p class="card-text">{{ 'Disadorn enno skuizhañ hon a deñvalijenn Pask devezh evel, honnont leziregezh estreget  gallek ifern Arre digalon lezenn piler, ur unnek urzh da poazh dan ezel. Harp doug tra pelec’h ur etrezek ostaleri ar boutañ, amanenn kroaz lost o netra logoden a livañ rak , a mignon gomz Pempont geniterv gouriz dan. E roud evidon kreiz kerzhout Plelann-Vihan c’hontrol gozh ur, eizh louet keloù bandenn arar wenodenn gwerenn patatez Ar Vouster, loen moged bez dezho Plegad-Gwerann Lanuon gwechall.'|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn headerConnect" data-toggle="tooltip" data-placement="bottom" title="Aller à la fiche article"><i class="fa-solid fa-eye text-white"></i></a>
+                                    <a href="#" class="btn headerConnect" data-toggle="tooltip" data-placement="bottom" title="Ajouter au panier"><i class="fa-solid fa-plus text-white"></i></a>
+                                    <button class="btn btn-outline-success">13.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center"
+                         style="width: 406.667px; margin-right: 30px;" role="group"
+                         aria-label="3 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/vflipverynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar3</h5>
+                                <p class="card-text">{{ 'Logoden biniou degemer mat an penn ar bed c’hwec’h, baradoz ha troc’hañ e Ar Gall hennezh c’houzoug estreget  kentel, se heol ziskouez degouezhout dont hag C’hall. Dro dirak fiziañs pennad c’hleuz ar kastell stivell tregont, tad pignat fraoñval tiegezh Krouer ar banniel dirak  bro, pod tregas serret Aradon alies Ar Releg-Kerhuon muiañ. Anzav vihan tachenn kilhog Aradon brudet saveteiñ netra Santeg, sec’hed al Skos aon c’helec’h ar bier pegañ rev, tan ar klask evitañ hevelep Lanuon prenañ. '|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                                    <button class="btn btn-outline-success">15.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center"
+                         style="width: 406.667px; margin-right: 30px;" role="group"
+                         aria-label="4 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/vhflipverynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar4</h5>
+                                <p class="card-text">{{ 'Disadorn enno skuizhañ hon a deñvalijenn Pask devezh evel, honnont leziregezh estreget  gallek ifern Arre digalon lezenn piler, ur unnek urzh da poazh dan ezel. Harp doug tra pelec’h ur etrezek ostaleri ar boutañ, amanenn kroaz lost o netra logoden a livañ rak , a mignon gomz Pempont geniterv gouriz dan. E roud evidon kreiz kerzhout Plelann-Vihan c’hontrol gozh ur, eizh louet keloù bandenn arar wenodenn gwerenn patatez Ar Vouster, loen moged bez dezho Plegad-Gwerann Lanuon gwechall.'|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                                    <button class="btn btn-outline-success">17.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center"
+                         style="width: 406.667px; margin-right: 30px;" role="group"
+                         aria-label="5 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/flippedverynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar5</h5>
+                                <p class="card-text">{{ 'Logoden biniou degemer mat an penn ar bed c’hwec’h, baradoz ha troc’hañ e Ar Gall hennezh c’houzoug estreget  kentel, se heol ziskouez degouezhout dont hag C’hall. Dro dirak fiziañs pennad c’hleuz ar kastell stivell tregont, tad pignat fraoñval tiegezh Krouer ar banniel dirak  bro, pod tregas serret Aradon alies Ar Releg-Kerhuon muiañ. Anzav vihan tachenn kilhog Aradon brudet saveteiñ netra Santeg, sec’hed al Skos aon c’helec’h ar bier pegañ rev, tan ar klask evitañ hevelep Lanuon prenañ. '|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                                    <button class="btn btn-outline-success">19.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center"
+                         style="width: 406.667px; margin-right: 30px;" role="group"
+                         aria-label="6 / 9">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('images/vflipverynoise.png') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Produit de oufbatar6</h5>
+                                <p class="card-text">{{ 'Logoden biniou degemer mat an penn ar bed c’hwec’h, baradoz ha troc’hañ e Ar Gall hennezh c’houzoug estreget  kentel, se heol ziskouez degouezhout dont hag C’hall. Dro dirak fiziañs pennad c’hleuz ar kastell stivell tregont, tad pignat fraoñval tiegezh Krouer ar banniel dirak  bro, pod tregas serret Aradon alies Ar Releg-Kerhuon muiañ. Anzav vihan tachenn kilhog Aradon brudet saveteiñ netra Santeg, sec’hed al Skos aon c’helec’h ar bier pegañ rev, tan ar klask evitañ hevelep Lanuon prenañ. '|u.truncate(50, '...') }}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                                    <button class="btn btn-outline-success">21.99€</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                     aria-controls="swiper-wrapper-42f301fbbea919410" aria-disabled="false"></div>
+                <div class="swiper-button-prev" tabindex="-1" role="button" aria-label="Previous slide"
+                     aria-controls="swiper-wrapper-42f301fbbea919410" aria-disabled="true"></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 5,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock %}
 {% endblock %}
 {% block footer %}
     {{ parent() }}
