@@ -40,27 +40,24 @@
             <!-- Swiper -->
             <div class="swiper my-5 mySwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
                 <div class="swiper-wrapper" id="swiper-wrapper-42f301fbbea919410" aria-live="polite">
+                    {% for product in products %}
                     <div class="swiper-slide swiper-slide-active d-flex justify-content-center swiper-slide-active"
                          style="width: 406.667px; margin-right: 30px;"
                          role="group"
                          aria-label="1 / 9">
                         <div class="card" style="width: 18rem;">
-                            <img src="{{ asset('images/verynoise.png') }}" class="card-img-top" alt="...">
+                            <img src="{{ asset('images/products/') ~ product.image }}" class="card-img-top" alt="image du produit" height="400" width="auto">
                             <div class="card-body">
-                                <h5 class="card-title">Produit de oufbatar1</h5>
-                                <p class="card-text">{{ 'Logoden biniou degemer mat an penn ar bed c’hwec’h, baradoz ha troc’hañ e
-                            Ar Gall hennezh c’houzoug estreget kentel, se heol ziskouez degouezhout dont hag C’hall. Dro
-                            dirak fiziañs pennad c’hleuz ar kastell stivell tregont, tad pignat fraoñval tiegezh Krouer
-                            ar banniel dirak bro, pod tregas serret Aradon alies Ar Releg-Kerhuon muiañ. Anzav vihan
-                            tachenn kilhog Aradon brudet saveteiñ netra Santeg, sec’hed al Skos aon c’helec’h ar bier
-                            pegañ rev, tan ar klask evitañ hevelep Lanuon prenañ.'|u.truncate(50, '...') }}</p>
+                                <h5 class="card-title text-center">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.description|u.truncate(50, '...') }}</p>
                                 <div class="d-flex justify-content-between">
-                                    <a href="#" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
-                                    <button class="btn btn-outline-success">11.99€</button>
+                                    <a href="#" class="btn buttonStyleAlt" data-toggle="tooltip" data-placement="bottom" title="Aller à la fiche article"><i class="fa-solid fa-eye text-white"></i></a>
+                                    <a href="#" class="btn buttonStyleAlt" data-toggle="tooltip" data-placement="bottom" title="Ajouter au panier"><i class="fa-solid fa-plus text-white"></i></a>
+                                    <button class="btn buttonStyleOutline" disabled>{{product.price}}€</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>{#
                     <div class="swiper-slide swiper-slide-next d-flex justify-content-center swiper-slide-next"
                          style="width: 406.667px; margin-right: 30px;"
                          role="group"
@@ -137,7 +134,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>#}
+                    {% endfor %}
                 </div>
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                      aria-controls="swiper-wrapper-42f301fbbea919410" aria-disabled="false"></div>
