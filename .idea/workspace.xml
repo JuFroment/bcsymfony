@@ -5,41 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5719776c-76ec-4438-90b6-b962a72cf29a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223094125.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223094324.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223095728.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223103845.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223110643.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220223110904.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/flippedverynoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ProductFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/pagination.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/search/searchResults.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin/datatable.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin/datatable.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/datatable.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/datatable.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/parts/sidenav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/parts/sidenav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/cgucgv.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/cgucgv.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/mentions.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/mentions.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/parts/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/parts/footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/parts/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/parts/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/product.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login2/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login2/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +189,7 @@
       <workItem from="1645971606941" duration="895000" />
       <workItem from="1645983768848" duration="58000" />
       <workItem from="1646036597930" duration="701000" />
+      <workItem from="1646134325214" duration="1384000" />
     </task>
     <servers />
   </component>
