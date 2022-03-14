@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-3">
+                    <img src="{{ asset('images/products/' ~ product.image) }}" class="img-fluid d-block mx-auto" alt="100%x280">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.name }}</h4>
+                        <p class="card-text">{{ product.description|u.truncate(50, '...') }}</p>
+                        <a href="{{ path('panier_add', {'id' : product.id}) }}" class="btn buttonStyle">Ajouter au panier</a>
+                        <a href="{{ path('detail', {'id': product.id}) }}" class="btn btn-success">Voir le détail</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

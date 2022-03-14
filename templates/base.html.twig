@@ -13,16 +13,9 @@
         {#Font Awesome#}
         <link rel="stylesheet" href="{{ asset('fontAwesome/css/all.css') }}">
         {#Custom Style#}
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}"
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {% endblock %}
 
-    {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
-        {#Bootstrap JS#}
-        <script rel="script" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
-        {#Font Awesome JS#}
-        <script rel="script" src="{{ asset('fontAwesome/js/all.js') }}"></script>
-    {% endblock %}
 </head>
 <body>
 {% block header %}
@@ -53,5 +46,15 @@
     </div>
 </div>
     {% endif %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {#Bootstrap JS#}
+    <script rel="script" src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+    {#Font Awesome JS#}
+    <script rel="script" src="{{ asset('fontAwesome/js/all.js') }}"></script>
+    {#Swiper CDN JS#}
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+{% endblock %}
 </body>
 </html>

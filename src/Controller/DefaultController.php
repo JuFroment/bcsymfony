@@ -54,5 +54,22 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    #[Route('/boutique', name: "boutique")]
+    public function boutique(ProductRepository $pr): Response
+    {
+        $products = $this->productRepository->findAll();
+
+        return $this->render('default/boutique.html.twig', [
+            'products' => $products
+        ]);
+
+    }
+    #[Route('/prestations', name: "prestations")]
+    public function prestations(): Response{
+
+        return $this->render('default/prestations.html.twig');
+
+    }
+
 
 }
