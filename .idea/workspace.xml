@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5719776c-76ec-4438-90b6-b962a72cf29a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/flippedverynoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/verynoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/vflipverynoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/vhflipverynoise.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/boutique.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default/prestations.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/turtle-621645014ecce.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/turtle-621645014ecce.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/default/parts/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/parts/header.html.twig" afterDir="false" />
     </list>
@@ -202,7 +195,7 @@
       <workItem from="1646036597930" duration="701000" />
       <workItem from="1646134325214" duration="1384000" />
       <workItem from="1647249597176" duration="11960000" />
-      <workItem from="1647265235534" duration="3517000" />
+      <workItem from="1647265235534" duration="5326000" />
     </task>
     <servers />
   </component>
